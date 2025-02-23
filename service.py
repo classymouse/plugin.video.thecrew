@@ -26,9 +26,11 @@ import re
 import traceback
 import glob
 
+from threading import Thread
 from shutil import rmtree
 from resources.lib.modules import control
 from resources.lib.modules import trakt
+from resources.lib.modules import workers
 
 from resources.lib.modules.crewruntime import c
 
@@ -36,6 +38,13 @@ import xbmc
 import xbmcvfs
 import xbmcgui
 import xbmcaddon
+
+QUARTERLY = 60 * 15
+HALF_HOUR = 60 * 30
+HOURLY = 60 * 60
+
+
+
 
 
 
@@ -132,6 +141,8 @@ def savefile(path_to_the_file, content):
 
 
 
+
+
 def syncTraktLibrary():
     control.execute('RunPlugin(plugin://plugin.video.thecrew/?action=tvshowsToLibrarySilent&url=traktcollection')
     control.execute('RunPlugin(plugin://plugin.video.thecrew/?action=moviesToLibrarySilent&url=traktcollection')
@@ -156,7 +167,6 @@ def main():
         syncTrakt()
         c.log(f"[CM Debug @ 155 in service.py] after syncTrakt")
 
-        # cm - waiting 30 secs for widgets to load
         #monitor.waitForAbort(10)
         control.startupMaintenance()
 
@@ -208,9 +218,55 @@ def main():
         failure = traceback.format_exc()
         c.log(f'[CM Debug @ 204 in service.py]Traceback:: {str(failure)}')
         c.log(f'[CM Debug @ 205 in service.py]Exception raised. Error = {str(e)}')
-    finally:
-        c.log('monitor passing finally')
-        del monitor
+
+
+
+
+
+
+
+
+
+
+
+
+class TraktMonitor(xbmc.Monitor):
+    def __init__(self):
+        xbmc.Monitor.__init__(self)
+
+    def run(self):
+        c.log('\n===========================\nTraktMonitor Service Starting\n===========================\n')
+        while not self.abortRequested():
+            if self.waitForAbort(QUARTERLY):#seconds
+                break
+            c.log('\n===========================\nTraktMonitor Service Update Performed\n===========================\n')
+            trakt.syncTrakt()
+            syncTraktLibrary()
+        c.log('\n===========================\nTraktMonitor Service Finished\n===========================\n')
+
+class CrewMonitor(xbmc.Monitor):
+    def __init__(self):
+        xbmc.Monitor.__init__(self)
+        self.startServices()
+
+    def __del__(self):
+        c.log('monitor deleted')
+        #stopping threads is highly unrecommended due to the nature. It is better to let the (a) thread(s) die on their own
+        del self
+
+    def startServices(self):
+        Thread(target=TraktMonitor().run).start()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -218,3 +274,4 @@ control.execute('RunPlugin(plugin://%s)' % control.get_plugin_url({'action': 'se
 
 if __name__ == '__main__':
     main()
+    CrewMonitor().waitForAbort()

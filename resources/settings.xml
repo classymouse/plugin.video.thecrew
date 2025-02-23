@@ -2,7 +2,7 @@
 <settings>
     <category label="32310">
         <setting id="appearance.alt" type="action" label="32311" default="-" option="close" action="RunPlugin(plugin://plugin.video.thecrew/?action=artwork)" visible="!System.HasAddon(script.thecrew.artwork)" />
-        <setting id="appearance.1" type="select" label="32311" values="thecrew" default="thecrew" visible="false" />
+        <setting id="appearance.1" type="select" label="32311" values="thecrew" default="thecrew" visible="true" />
         <setting id="indicators.alt" type="enum" label="32313" lvalues="32314|32315" default="1" visible="!eq(-1,)" />
         <setting id="indicators" type="enum" label="32313" lvalues="32314" default="0" visible="eq(-2,)" />
         <setting id="api.language" type="select" label="32316" values="AUTO|Bulgarian|Chinese|Croatian|Czech|Danish|Dutch|English|Finnish|French|German|Greek|Hebrew|Hungarian|Italian|Japanese|Korean|Norwegian|Polish|Portuguese|Romanian|Russian|Serbian|Slovak|Slovenian|Spanish|Swedish|Thai|Turkish|Ukrainian" default="AUTO" />
@@ -160,7 +160,6 @@
             <setting id="provider.dbgo" type="bool" label="DBGO" default="true" />
             <setting id="provider.easynews" type="bool" label="EASYNEWS" default="true" />
             <setting id="provider.filmxy" type="bool" label="FILMXY" default="true" />
-            <setting id="provider.furk" type="bool" label="FURK" default="true" />
             <setting id="provider.gowatchseries" type="bool" label="GOWATCHSERIES" default="true" />
             <setting id="provider.ororo" type="bool" label="ORORO" default="true" />
             <setting id="provider.watchepisodes" type="bool" label="WATCHEPISODES" default="true" />
@@ -207,12 +206,6 @@
         <setting type="lsep" label="Easynews"/>
         <setting id="easynews.user" type="text" label="Easynews Username" default=""/>
         <setting id="easynews.password" type="text" label="Easynews Password" default=""/>
-        <setting type="sep" />
-        <setting type="lsep" label="70010" />
-        <setting id="furk.user_name" type="text" label="90130" default="" />
-        <setting id="furk.user_pass" type="text" label="90131" option="hidden" default="" />
-        <setting id="furk.api" type="text" label="90132" default="" />
-        <setting id="furk.limit" label="Limit results" type="slider" default="25" range="5,5,200" option="int" />
     </category>
     <category label="32541">
         <setting id="library.movie" type="folder" label="32349" default="special://userdata/addon_data/plugin.video.thecrew/Movies" />

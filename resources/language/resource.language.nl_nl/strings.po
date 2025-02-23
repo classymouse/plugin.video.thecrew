@@ -1168,10 +1168,6 @@ msgctxt "#32714"
 msgid "[B][COLOR orchid]THE CREW[/COLOR][/B] : Changelog"
 msgstr "[B][COLOR orchid]THE CREW[/COLOR][/B] : Wijzigingsoverzicht"
 
-msgctxt "#70010"
-msgid "Furk.net"
-msgstr "Furk.net"
-
 msgctxt "#71000"
 msgid "CARTOONHD"
 msgstr "CARTOONHD"
@@ -1183,10 +1179,6 @@ msgstr "EASYNEWS"
 msgctxt "#71002"
 msgid "FILMXY"
 msgstr "FILMXY"
-
-msgctxt "#71003"
-msgid "FURK"
-msgstr "FURK"
 
 msgctxt "#71004"
 msgid "HDMTO"
@@ -1751,18 +1743,6 @@ msgstr "Updates Plannen Elke... (in Uren)"
 msgctxt "#90127"
 msgid "Account Information"
 msgstr "Account Informatie"
-
-msgctxt "#90130"
-msgid "Furk Username"
-msgstr "Furk Gebruikersnaam"
-
-msgctxt "#90131"
-msgid "Furk Password"
-msgstr "Furk Wachtwoord"
-
-msgctxt "#90132"
-msgid "Furk API Key"
-msgstr "Furk API Sleutel"
 
 msgctxt "#90133"
 msgid "Limit results"

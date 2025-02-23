@@ -1221,10 +1221,6 @@ msgctxt "#32714"
 msgid "[B][COLOR orchid]THE CREW[/COLOR][/B] : Changelog"
 msgstr ""
 
-msgctxt "#70010"
-msgid "Furk.net"
-msgstr ""
-
 msgctxt "#71000"
 msgid "CARTOONHD"
 msgstr ""
@@ -1235,10 +1231,6 @@ msgstr ""
 
 msgctxt "#71002"
 msgid "FILMXY"
-msgstr ""
-
-msgctxt "#71003"
-msgid "FURK"
 msgstr ""
 
 msgctxt "#71004"
@@ -1803,18 +1795,6 @@ msgstr ""
 
 msgctxt "#90127"
 msgid "Account Information"
-msgstr ""
-
-msgctxt "#90130"
-msgid "Furk Username"
-msgstr ""
-
-msgctxt "#90131"
-msgid "Furk Password"
-msgstr ""
-
-msgctxt "#90132"
-msgid "Furk API Key"
 msgstr ""
 
 msgctxt "#90133"
