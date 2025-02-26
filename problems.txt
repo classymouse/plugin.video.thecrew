@@ -1,0 +1,4 @@
+Hello. This is a question regarding the library feature in the crew addon. When you search for a TV series, you can add it to the library and they all go into the crew folder. Kodi and the crew look for updates daily and each time a new episode is released, it's automatically added to the library.
+The problem is that it only looks for new episodes and not new seasons. In other words let's say you already have 3 seasons of a show. You keep getting all new episodes to the end, but when a few months later season 4 is released, nothing happens and you'll have to manually add the whole series to your library for it to work.
+This is not new. It's been like this for ages and I'm wondering if you're aware of it and if there's a way to fix it.
+Thank you. (WCB)
