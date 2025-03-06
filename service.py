@@ -18,9 +18,7 @@
 
 # CM - 06/07/2021
 # cm - 06/20/2023
-# cm - testfile VS without mocking (just useless)
-# pylint: disable=import-error
-# pylint: disable=no-name-in-module
+
 import os
 import re
 import traceback
@@ -42,12 +40,6 @@ import xbmcaddon
 QUARTERLY = 60 * 15
 HALF_HOUR = 60 * 30
 HOURLY = 60 * 60
-
-
-
-
-
-
 
 def conversion():
 
@@ -224,12 +216,6 @@ def main():
 
 
 
-
-
-
-
-
-
 class TraktMonitor(xbmc.Monitor):
     def __init__(self):
         xbmc.Monitor.__init__(self)
@@ -237,7 +223,7 @@ class TraktMonitor(xbmc.Monitor):
     def run(self):
         c.log('\n===========================\nTraktMonitor Service Starting\n===========================\n')
         while not self.abortRequested():
-            if self.waitForAbort(QUARTERLY):#seconds
+            if self.waitForAbort(HOURLY):#seconds
                 break
             c.log('\n===========================\nTraktMonitor Service Update Performed\n===========================\n')
             trakt.syncTrakt()
@@ -251,7 +237,8 @@ class CrewMonitor(xbmc.Monitor):
 
     def __del__(self):
         c.log('monitor deleted')
-        #stopping threads is highly unrecommended due to the nature. It is better to let the (a) thread(s) die on their own
+        #stopping threads is highly unrecommended due to the nature.
+        #It is better to let the (a) thread(s) die on their own
         del self
 
     def startServices(self):
