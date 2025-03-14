@@ -118,20 +118,9 @@
         <setting id="bookmarks" type="bool" label="32344" default="true" />
         <setting id="bookmarks.auto" type="bool" label="90124" default="false" enable="!eq(-1,false)" />
     </category>
-    <category>
-        <category label="32121">
-            <setting id="rd.auth" type="text" default="" visible="hidden"/>
-            <setting type="action" label="32306" option="close" action="RunPlugin(plugin://plugin.video.thecrew/?action=authRD)" />
-            <setting id="rd.user" type="text" label="Account" default="" visible="true" enable="false" />
-            <setting id="rd.token" type="text" visible="hidden" label="" default="" />
-            <setting id="rd.refresh" type="text" visible="hidden" label="" default="" />
-            <setting type="lsep" label="32315" />
-            <setting type="lsep" label="32315" />
-            <setting type="lsep" label="32315" />
 
-        </category>
-    </category>
-        <category label ="32315">
+
+    <category label ="32315">
         <setting type="lsep" label="32315" />
         <setting id="bookmarks.trakt" type="bool" label="90123" default="false" />
         <setting id="lists.widget" type="enum" label="32329" lvalues="32302|32301" default="1" />
@@ -146,9 +135,40 @@
         <setting type="lsep" label="90127" />
         <setting id="trakt.auth" type="text" default="" visible="hidden"/>
         <setting type="action" label="32306" option="close" action="RunPlugin(plugin://plugin.video.thecrew/?action=authTrakt)" />
-        <setting id="trakt.user" type="text" label="Account" default="" visible="true" enable="false" />
+        <setting id="trakt.user" type="text" label="32130" default="" visible="true" enable="false" />
         <setting id="trakt.token" type="text" visible="hidden" label="" default="" />
         <setting id="trakt.refresh" type="text" visible="hidden" label="" default="" />
+    </category>
+    <category label="32346">
+        <setting type="lsep" label="API Keys" />
+        <setting type="text" label="32582" enable="false" />
+        <setting type="lsep" label="32124" enable="false" />
+        <setting id="trakt.client_id" type="text" option="hidden" label="32125" default="" />
+        <setting id="trakt.client_secret" type="text" option="hidden" label="32126" default="" />
+        <setting type="lsep" label="32129" enable="false" />
+        <setting id="orion.username" type="text" label="32130" default="" visible="true" enable="false" />
+        <setting id="orion.token" type="text" visible="hidden" label="token" default="" enable="false" />
+        <setting id="orion.user.apikey" type="text" visible="hidden" label="key" default="" enable="false" />
+
+
+
+
+
+        <setting type="lsep" label="32583" default="" />
+        <setting id="fanart.tv.user" type="text" label="32309" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="TMDb" />
+        <setting id="tm.user" type="text" option="hidden" label="32309" default="0049795edb57568b95240bc9e61a9dfc" />
+        <setting type="sep" />
+        <setting type="lsep" label="IMDb" />
+        <setting id="imdb.user" type="text" label="32303" default="" />
+        <setting type="sep" />
+        <setting type="lsep" label="TVDb" />
+        <setting id="tvdb.user" type="text" option="hidden" label="32303" default="27bef29779bbffe947232dc310a91f0c" />
+        <setting type="sep" />
+        <setting type="lsep" label="Easynews"/>
+        <setting id="easynews.user" type="text" label="Easynews Username" default=""/>
+        <setting id="easynews.password" type="text" label="Easynews Password" default=""/>
     </category>
     <!--Clear-->
     <category label="32345">
@@ -188,25 +208,6 @@
             <setting id="provider.yourbittorrent" type="bool" label="YOURBITTORRENT" default="true" />
     </category>
     <!--END CLEAR-->
-    <category label="32346">
-        <setting type="lsep" label="FANART.TV" />
-        <setting type="lsep" label="32582" default="" />
-        <setting type="lsep" label="32583" default="" />
-        <setting id="fanart.tv.user" type="text" label="32309" default="" />
-        <setting type="sep" />
-        <setting type="lsep" label="TMDb" />
-        <setting id="tm.user" type="text" option="hidden" label="32309" default="0049795edb57568b95240bc9e61a9dfc" />
-        <setting type="sep" />
-        <setting type="lsep" label="IMDb" />
-        <setting id="imdb.user" type="text" label="32303" default="" />
-        <setting type="sep" />
-        <setting type="lsep" label="TVDb" />
-        <setting id="tvdb.user" type="text" option="hidden" label="32303" default="27bef29779bbffe947232dc310a91f0c" />
-        <setting type="sep" />
-        <setting type="lsep" label="Easynews"/>
-        <setting id="easynews.user" type="text" label="Easynews Username" default=""/>
-        <setting id="easynews.password" type="text" label="Easynews Password" default=""/>
-    </category>
     <category label="32541">
         <setting id="library.movie" type="folder" label="32349" default="special://userdata/addon_data/plugin.video.thecrew/Movies" />
         <setting id="library.tv" type="folder" label="90183" default="special://userdata/addon_data/plugin.video.thecrew/TVShows" />

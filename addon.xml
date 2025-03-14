@@ -10,6 +10,7 @@
         <import addon="script.module.requests" />
         <import addon="script.module.beautifulsoup4" />
         <import addon="script.module.six" />
+        <import addon="script.module.orion" version="5.0.0" />
         <import addon="plugin.video.youtube" optional="true" />
         <import addon="script.module.inputstreamhelper" version="0.3.3"/>
     </requires>

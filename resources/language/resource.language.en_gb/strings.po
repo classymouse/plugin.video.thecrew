@@ -456,8 +456,37 @@ msgctxt "#32123"
 msgid "Premiumize"
 msgstr ""
 
+msgctxt "#32124"
+msgid "Trakt API Credentials"
+msgstr ""
 
+msgctxt "#32125"
+msgid "Client ID"
+msgstr ""
 
+msgctxt "#32126"
+msgid "Client Secret"
+msgstr ""
+
+msgctxt "#32127"
+msgid "[B][COLOR lightskyblue]Orion[/COLOR][/B]"
+msgstr ""
+
+msgctxt "#32128"
+msgid "[B][COLOR lightskyblue]Orion[/COLOR][/B] : Userdetails"
+msgstr ""
+
+msgctxt "#32129"
+msgid "[B][COLOR lightskyblue]Orion[/COLOR][/B] : Settings"
+msgstr ""
+
+msgctxt "#32130"
+msgid "[B][COLOR lightskyblue]Orion[/COLOR][/B] : userlabel"
+msgstr ""
+
+msgctxt "#32130"
+msgid "Account"
+msgstr ""
 
 msgctxt "#32301"
 msgid "Enabled"
